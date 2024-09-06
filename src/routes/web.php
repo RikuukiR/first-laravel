@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 // use App\Http\Controllers\HelloController;
+use App\Http\Controllers\MiddlewareController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +20,8 @@ use App\Http\Controllers\TestController;
 //     return view('welcome');
 // });
 
-// Route::get('/', [TestController::class, 'index']);
+Route::get('/', [TestController::class, 'index']);
+Route::post('/', [TestController::class, 'post']);
 // Route::get('/test', [TestController::class, 'index']);
 // Route::get('/hello', [HelloController::class, 'index']);
 // Route::get('/', function () {
@@ -36,3 +38,5 @@ use App\Http\Controllers\TestController;
 //   return $greeting . '=おはようございます';
 // });
 Route::get('/', [TestController::class, 'index']);
+Route::get('/middleware', [MiddlewareController::class, 'index']);
+Route::post('/middleware', [MiddlewareController::class, 'post']);
