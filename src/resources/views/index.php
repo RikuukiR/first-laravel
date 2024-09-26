@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,14 @@
 
 <body>
     <h1>ブラウザに画面を表示できた！</h1>
+    <p><?php echo $content ?></p>
+
+    <table>
+        <tr>
+            <th>パスパラメータ</th>
+            <td><?php echo $param ?></td>
+        </tr>
+    </table>
 </body>
 
 </html>
