@@ -15,9 +15,10 @@ use App\Http\Controllers\HelloController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
+// Route::get('/test', [TestController::class, 'index']);
 Route::get('/test', [TestController::class, 'index']);
 Route::get('/hello', [HelloController::class, 'index']);
