@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\HelloController;
+use App\Http\Controllers\MiddlewareController;
+use GuzzleHttp\Middleware;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,3 +25,6 @@ Route::get('/', function () {
 Route::get('/test', [TestController::class, 'index']);
 Route::get('/hello', [HelloController::class, 'index']);
 Route::get('/', [TestController::class, 'index']);
+
+Route::get('/middleware', [MiddlewareController::class, 'index']);
+Route::post('/middleware', [MiddlewareController::class, 'post']);
